@@ -16,7 +16,7 @@ box-sizing: inherit;
 }
 
 html {
-font-size: 60%;
+font-size: 50%;
 box-sizing: border-box;
 }
 
@@ -108,22 +108,24 @@ h1 {
   transform: translate(-50%, 50%);
 }
 
-.between {
-  font-size: 1rem;
+.level {
+  font-size: 1.3rem;
   position: absolute;
-  top: 2rem;
+  top: 1rem;
   right: 2rem;
 }
 
+/*
 .again {
   position: absolute;
   top: 2rem;
   left: 2rem;
 }
+*/
 
 .guess {
   background: none;
-  border: 4px solid goldenrod;
+  border: 4px solid var(--btn-color);
   font-family: inherit;
   color: inherit;
   font-size: 5rem;
@@ -132,6 +134,10 @@ h1 {
   text-align: center;
   display: block;
   margin-bottom: 3rem;
+}
+.guess:focus {
+  outline: none;
+  border-color: var(--btn-active-color);
 }
 
 /* BOUTONS */
@@ -160,7 +166,6 @@ h1 {
   background-color: var(--btn-active-color);
 }
 
-
 .message {
   margin-bottom: 8rem;
   height: 3rem;
@@ -170,64 +175,111 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* RESPONSIVE 
-@media (max-width: 768px) {
-  header {
-    height: 20vh;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    border: 0;
   }
 
-  main {
-    height: 100vh;
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  html {
+    font-size: 65%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 1rem;
+  }
+
+  .site-content {
+    flex: 1;
+    display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-  .left,
-  .right {
-    width: 100%;
-    height: 50vh;
-    justify-content: center;
-  }
-
-  .number {
-    font-size: 4rem;
-    width: 10rem;
-    padding: 2rem 0rem;
-  }
-
-  .guess {
-    font-size: 3rem;
-    padding: 1.5rem;
-    width: 20rem;
-  }
-}
-@media (max-width: 480px) {
   header {
-    height: 15vh;
+    height: auto;
+    border-bottom-width: 4px;
+    padding-bottom: 2rem;
   }
 
-  main {
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-    height: 50vh;
-    justify-content: center;
+  h1 {
+    font-size: 2rem;
+    position: static;
+    transform: none;
+    margin: 2rem 0 1rem 0;
   }
 
   .number {
-    font-size: 3rem;
+    font-size: 3.5rem;
     width: 8rem;
-    padding: 1.5rem 0rem;
+    padding: 1.5rem 0;
+    position: static;
+    transform: none;
+    margin: 2rem auto;
+  }
+
+  .level {
+    font-size: 1rem;
+    position: static;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: block;
+  }
+
+  .difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  main {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+
+  .left, .right {
+    width: 100%;
+    font-size: 1.5rem;
+    align-items: stretch;
   }
 
   .guess {
     font-size: 2.5rem;
-    padding: 1rem;
-    width: 15rem;
+    width: 100%;
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-check, .btn-facile, .btn-moyen, .btn-difficile {
+    font-size: 1.2rem;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .message {
+    margin-bottom: 2rem;
+    height: auto;
+    font-size: 1.2rem;
+  }
+
+  .label-score, .label-highscore {
+    font-size: 1.2rem;
   }
 }
+
