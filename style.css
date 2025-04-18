@@ -1,4 +1,4 @@
-/* variable */
+/* VARIABLES */
 :root {
   --h1-color: #7907a3;
     --main-bg-color: #1e1e1e;
@@ -26,9 +26,7 @@ color: var(--h1-color);
 background-color: var(--main-bg-color);
 
 }
- 
 
-/* LAYOUT */
 header {
   position: relative;
   height: 35vh;
@@ -105,67 +103,32 @@ h1 {
   margin-bottom: 3rem;
 }
 
+/* BOUTONS */
 .btn-check {
   border: none;
-  background-color: var(--btn-color);  
+  background-color: var(--btn-color);
   color: #222;
   font-size: 2rem;
   font-family: inherit;
   padding: 2rem 3rem;
   cursor: pointer;
 }
+.btn-facile, .btn-moyen, .btn-difficile {
+    border: none;
+    background-color: var(--btn-color);
+    color: #222;
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.btn-check:hover, .btn-facile:hover, .btn-moyen:hover, .btn-difficile:hover {
+  background-color:  var(--btn-hover-color)
+}
+.btn-check:active, .btn-facile:active, .btn-moyen:active, .btn-difficile:active {
+  background-color: var(--btn-active-color);
+}
 
-.btn-facile {
-    border: none;
-    background-color: var(--btn-color);
-    color: #222;
-    font-size: 1rem;
-    font-family: inherit;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-.btn-moyen {
-    border: none;
-    background-color: var(--btn-color);
-    color: #222;
-    font-size: 1rem;
-    font-family: inherit;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-.btn-difficile {
-    border: none;
-    background-color: var(--btn-color);
-    color: #222;
-    font-size: 1rem;
-    font-family: inherit;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-.btn-check:hover {
-  background-color:  var(--btn-hover-color)
-}
-.btn-facile:hover {
-  background-color:  var(--btn-hover-color)
-}
-.btn-moyen:hover {
-    background-color:  var(--btn-hover-color)
-}
-.btn-difficile:hover {
-    background-color:  var(--btn-hover-color)
-}
-.btn-check:active {
-  background-color: var(--btn-active-color)
-}
-.btn-facile:active {
-  background-color: var(--btn-active-color)
-}
-.btn-moyen:active {
-  background-color: var(--btn-active-color)
-}
-.btn-difficile:active {
-  background-color: var(--btn-active-color)
-}
 
 .message {
   margin-bottom: 8rem;
