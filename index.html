@@ -9,28 +9,35 @@
   </head>
 
   <body>
-    <header>
-      <h1>Vas-tu deviner le nombre mystère ? 😈</h1>
-      <p class="between">(Entre 1 et 10)</p>
-      <button class="btn-facile">Facile</button>
-        <button class="btn-moyen">Moyen</button>
-        <button class="btn-difficile">Difficile</button>
-      <div class="number">?</div>
-    </header>
+    <div class="video-intro">
+        <video id="intro-video" autoplay muted playsinline onended="this.parentElement.classList.add('ended')">
+            <source src="videos/intro.mp4" type="video/mp4">
+        </video>
+    </div>
 
-    <main>
-      <section class="left">
-        <input type="number" class="guess" />
-        <button class="btn-check">Check</button>
-      </section>
-      <section class="right">
-        <p class="message">Voyons voir...</p>
-        <p class="label-score">Score:<span class="score">20</span></p>
-        <p class="label-highscore">
-          🥇 Meilleur score: <span class="highscore">0</span>
-        </p>
-      </section>
-    </main>
+    <div class="site-content hidden">
+
+        <header>
+        <h1>Vas-tu deviner le nombre mystère ? 😈</h1>
+        <p class="between">(Entre 1 et 10)</p>
+        <button class="btn-facile">Facile</button>
+            <button class="btn-moyen">Moyen</button>
+            <button class="btn-difficile">Difficile</button>
+        <div class="number">?</div>
+        </header>
+
+        <main>
+        <section class="left">
+            <input type="number" class="guess" />
+            <button class="btn-check">Check</button>
+        </section>
+        <section class="right">
+            <p class="message">Voyons voir...</p>
+            <p class="label-score">Score:<span class="score">20</span></p>
+            <p class="label-highscore">🥇 Meilleur score: <span class="highscore">0</span>
+            </p>
+        </section>
+        </main>
 
     <script src="script.js"></script>
   
