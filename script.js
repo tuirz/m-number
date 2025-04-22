@@ -95,7 +95,8 @@ const checkGuess = () => {
 ['facile', 'moyen', 'difficile', 'extreme'].forEach(level =>
   document.querySelector(`.btn-${level}`).addEventListener('click', () => selectLevel(level))
 );
-// ÉCOUTEUR BOUTON CHECK
+
+// ÉCOUTEUR BOUTON CHECK !important
 btnCheck.addEventListener('click', checkGuess);
 
 // Initialisation
