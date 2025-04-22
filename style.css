@@ -150,7 +150,7 @@ h1 {
   padding: 2rem 3rem;
   cursor: pointer;
 }
-.btn-facile, .btn-moyen, .btn-difficile {
+.btn-facile, .btn-moyen, .btn-difficile, .btn-extreme {
     border: none;
     background-color: var(--btn-color);
     color: #222;
@@ -159,10 +159,10 @@ h1 {
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
-.btn-check:hover, .btn-facile:hover, .btn-moyen:hover, .btn-difficile:hover {
+.btn-check:hover, .btn-facile:hover, .btn-moyen:hover, .btn-difficile:hover, .btn-extreme:hover {
   background-color:  var(--btn-hover-color)
 }
-.btn-check:active, .btn-facile:active, .btn-moyen:active, .btn-difficile:active {
+.btn-check:active, .btn-facile:active, .btn-moyen:active, .btn-difficile:active, .btn-extreme:active {
   background-color: var(--btn-active-color);
 }
 
@@ -265,7 +265,7 @@ h1 {
     margin-bottom: 2rem;
   }
 
-  .btn-check, .btn-facile, .btn-moyen, .btn-difficile {
+  .btn-check, .btn-facile, .btn-moyen, .btn-difficile, .btn-extreme {
     font-size: 1.2rem;
     padding: 1rem 0.5rem;
     width: 100%;
