@@ -102,5 +102,12 @@ const checkGuess = () => {
 // ÉCOUTEUR BOUTON CHECK !important
 btnCheck.addEventListener('click', checkGuess);
 
+// ÉCOUTEUR CHECK ENTER
+guessInput.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
+    checkGuess();
+  }
+});
+
 // INIT DÉFAULT
 selectLevel('facile');
