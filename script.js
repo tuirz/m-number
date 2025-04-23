@@ -16,9 +16,9 @@ const numberBox = document.querySelector('.btn-number');
 
 const levels = {
   facile:    { min: 1, max: 10,   text: '(Entre 1 et 10)',   chances: 3 },
-  moyen:     { min: 1, max: 50,   text: '(Entre 1 et 50)',   chances: 7 },
-  difficile: { min: 1, max: 100,  text: '(Entre 1 et 100)',  chances: 10 },
-  extreme:   { min: 1, max: 1000, text: '(Entre 1 et 1000)', chances: 15 }
+  moyen:     { min: 1, max: 50,   text: '(Entre 1 et 50)',   chances: 2 },
+  difficile: { min: 1, max: 100,  text: '(Entre 1 et 100)',  chances: 1 },
+  extreme:   { min: 1, max: 1000, text: '(Entre 1 et 1000)', chances: 10 }
 };
 
 // VARIABLES
