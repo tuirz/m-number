@@ -94,7 +94,7 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
-.number {
+.btn-number {
   background: #eee;
   color: #333;
   font-size: 6rem;
@@ -161,7 +161,7 @@ h1 {
 .btn-check:hover, .btn-facile:hover, .btn-moyen:hover, .btn-difficile:hover, .btn-extreme:hover {
   background-color:  var(--btn-hover-color)
 }
-.btn-check:active, .btn-facile:active, .btn-moyen:active, .btn-difficile:active, .btn-extreme:active {
+.btn-check:active, .btn-facile:active, .btn-moyen:active, .btn-difficile:active, .btn-extreme:active, .btn-number:active {
   background-color: var(--btn-active-color);
 }
 
@@ -219,7 +219,7 @@ h1 {
     margin: 2rem 0 1rem 0;
   }
 
-  .number {
+  .btn-number {
     font-size: 3.5rem;
     width: 8rem;
     padding: 1.5rem 0;

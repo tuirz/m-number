@@ -12,7 +12,7 @@ const message = document.querySelector('.message');
 const attemptsSpan = document.querySelector('.label-attempts .attempts');
 const scoreSpan = document.querySelector('.score');
 const highscoreSpan = document.querySelector('.highscore');
-const numberBox = document.querySelector('.number');
+const numberBox = document.querySelector('.btn-number');
 
 const levels = {
   facile:    { min: 1, max: 10,   text: '(Entre 1 et 10)',   chances: 3 },
@@ -21,6 +21,7 @@ const levels = {
   extreme:   { min: 1, max: 1000, text: '(Entre 1 et 1000)', chances: 15 }
 };
 
+// VARIABLES
 let currentLevel = 'facile', chancesRestantes, mysteryNumber, score = 0, highscore = 0;
 
 const generateMysteryNumber = () => {
@@ -28,7 +29,7 @@ const generateMysteryNumber = () => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-//MÀJ UI
+// MÀJ UI
 const updateUI = () => {
   attemptsSpan.textContent = chancesRestantes;
   scoreSpan.textContent = score;
@@ -46,8 +47,10 @@ const startGame = () => {
   guessInput.disabled = false;
   btnCheck.disabled = false;
   updateUI();
+  numberBox.addEventListener('click', startGame);
 };
 
+// SÉLECTION NIVEAU
 const selectLevel = level => {
   currentLevel = level;
   btns.forEach(btn => btn.classList.remove('active'));
@@ -99,5 +102,5 @@ const checkGuess = () => {
 // ÉCOUTEUR BOUTON CHECK !important
 btnCheck.addEventListener('click', checkGuess);
 
-// Initialisation
+// INIT DÉFAULT
 selectLevel('facile');
